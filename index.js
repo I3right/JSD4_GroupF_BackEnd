@@ -10,7 +10,7 @@ const authyRoutes = require("./routes/authRoutes.js");
 const app = express();
 
 const corsOption = {
-  origin: process.env.FRONT_URL, credentials: true,
+  origin: 'https://fuiyoh.vercel.app', credentials: true,
 }
 
 app.use(cors(corsOption));
