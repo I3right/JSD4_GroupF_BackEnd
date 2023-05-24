@@ -8,7 +8,12 @@ const activityRoutes = require("./routes/activityRoutes.js");
 const authyRoutes = require("./routes/authRoutes.js");
 
 const app = express();
-app.use(cors());
+
+const corsOption = {
+  origin: process.env.FRONT_URL, credentials: true,
+}
+
+app.use(cors(corsOption));
 app.use(morgan("dev"));
 app.use(express.json({ limit: "25mb", extended: true }));
 
